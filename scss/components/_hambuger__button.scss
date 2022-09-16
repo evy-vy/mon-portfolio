@@ -1,0 +1,41 @@
+// gestion du bouton menu
+.header__button {
+  @include neumorphic__btn;
+  z-index: 10;
+
+  @include tablette {
+    display: none;
+  }
+}
+
+// gestion des lignes du bouton menu
+.line {
+  @include lines;
+}
+
+.line:nth-child(2) {
+  transform-origin: 50% 50%;
+}
+
+// gestion du bouton de navigation + ligne au toggle
+.active {
+  @include neumorphic__btn__active;
+
+  .line {
+    margin: -2px;
+    background-color: $pink_color;
+    box-shadow: 0px 0px 10px 0px rgba(255, 186, 229, 0.8);
+  }
+
+  .line:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+
+  .line:nth-child(2) {
+    transform: scale(0)
+  }
+
+  .line:nth-child(3) {
+    transform: rotate(45deg);
+  }
+}

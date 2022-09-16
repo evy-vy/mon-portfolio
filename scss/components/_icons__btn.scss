@@ -1,0 +1,60 @@
+// gestion bouton dans navigation
+
+.icon__container {
+  @include neumorphic__btn;
+  display: flex;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+
+  @include tablette {
+    width: 60px;
+    height: 60px;
+  }
+
+  >i {
+    padding: 5px;
+    font-size: 1.7rem;
+    color: $blue_color;
+
+    @include tablette {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.nav__list-menu {
+  @include tablette {
+    flex-direction: column;
+  }
+
+  &:hover {
+    .icon__container {
+      @include neumorphic__btn__active;
+      background: #ff66c4;
+      transition: all 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+
+
+      >i {
+        color: #fff;
+        transform: scale(1.1);
+        border-radius: 100%;
+        border: 5px solid $primary-color;
+        transition: transform 0.5s ease;
+      }
+    }
+
+    .icon__container,
+    .nav__paragraph-menu {
+      transform: translateX(-15px);
+      transition: transform 0.2s ease-out;
+      font-weight: 700;
+
+      @include tablette {
+        transform: scale(1.1);
+        transition: scale 0.2 ease-out;
+      }
+    }
+  }
+}

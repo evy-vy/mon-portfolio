@@ -1,0 +1,19 @@
+{
+  "name": "mon-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evy-vy/mon-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evy-vy/mon-portfolio/issues"
+  },
+  "homepage": "https://github.com/evy-vy/mon-portfolio#readme"
+}
