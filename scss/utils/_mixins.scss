@@ -46,9 +46,65 @@
   box-shadow: inset 9.91px 9.91px 15px #d9dade, inset -9.91px -9.91px 15px #fff;
 }
 
+//tooltip
+@mixin tooltip {
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  font-size: 1.6rem;
+  padding: 10px 18px;
+  background: #fff;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+  border-radius: 25px;
+  box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+@mixin fleche {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
 // media queries
 @mixin tablette {
   @media screen and (min-width: map-get($tablette-breakpoints, tablette-min)) {
+    @content;
+  }
+}
+
+@mixin tablette-max {
+  @media screen and (max-width: map-get($tablette-breakpoints, tablette-max)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($desktop-breakpoints, desktop-min)) and (max-width: map-get($desktop-breakpoints, mid-desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop-min {
+  @media screen and (min-width: map-get($desktop-breakpoints, desktop-min)) {
+    @content;
+  }
+}
+
+@mixin big-desktop {
+  @media screen and (min-width: map-get($desktop-breakpoints, big-desktop-min)) {
+    @content;
+  }
+}
+
+@mixin tv {
+  @media screen and (min-width: map-get($tv-breakpoints, tv-min)) {
     @content;
   }
 }

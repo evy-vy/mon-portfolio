@@ -1,0 +1,25 @@
+.tooltip {
+  display: none;
+
+  @include tablette {
+    display: block;
+    @include tooltip;
+
+    .fleche {
+      @include fleche;
+    }
+
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.tooltip.github {
+  @include tablette {
+    right: 85px;
+  }
+
+  @include desktop-min {
+    right: 80px;
+  }
+}

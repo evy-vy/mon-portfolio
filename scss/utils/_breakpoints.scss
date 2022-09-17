@@ -1,3 +1,5 @@
 // breakpoints
 
-$tablette-breakpoints : (tablette-min: 850px, max-tablette: 1010px);
+$tablette-breakpoints : (tablette-min: 850px, max-tablette: 1024px);
+$desktop-breakpoints : (desktop-min: 1025px, mid-desktop: 1299px, big-desktop-min: 1300px);
+$tv-breakpoints : (tv-min: 1499px);

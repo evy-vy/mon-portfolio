@@ -30,11 +30,29 @@
   }
 
   &:hover {
+    .tooltip {
+      top: -15px;
+      opacity: 1;
+      pointer-events: auto;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .accueil,
+    .profil,
+    .parcours,
+    .portfolio,
+    .contact,
+    .github,
+    .linkedin {
+      font-weight: bold;
+      color: #000;
+    }
+
     .icon__container {
       @include neumorphic__btn__active;
       background: #ff66c4;
       transition: all 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
-
 
       >i {
         color: #fff;
@@ -56,5 +74,15 @@
         transition: scale 0.2 ease-out;
       }
     }
+  }
+}
+
+.github {
+  @include desktop {
+    margin: 0 20px 0 15px !important;
+  }
+
+  @include big-desktop {
+    margin: 0 50px 0 30px !important;
   }
 }

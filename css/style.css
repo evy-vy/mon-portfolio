@@ -184,6 +184,23 @@ th {
     flex-direction: column;
   }
 }
+.nav__list-menu:hover .tooltip {
+  top: -15px;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.2);
+}
+.nav__list-menu:hover .accueil,
+.nav__list-menu:hover .profil,
+.nav__list-menu:hover .parcours,
+.nav__list-menu:hover .portfolio,
+.nav__list-menu:hover .contact,
+.nav__list-menu:hover .github,
+.nav__list-menu:hover .linkedin {
+  font-weight: bold;
+  color: #000;
+}
 .nav__list-menu:hover .icon__container {
   box-shadow: inset 9.91px 9.91px 15px #d9dade, inset -9.91px -9.91px 15px #fff;
   background: #ff66c4;
@@ -210,6 +227,59 @@ th {
   }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1299px) {
+  .github {
+    margin: 0 20px 0 15px !important;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .github {
+    margin: 0 50px 0 30px !important;
+  }
+}
+
+.tooltip {
+  display: none;
+}
+@media screen and (min-width: 850px) {
+  .tooltip {
+    display: block;
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    font-size: 1.6rem;
+    padding: 10px 18px;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tooltip .fleche {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .tooltip.github {
+    right: 85px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .tooltip.github {
+    right: 80px;
+  }
+}
+
 header {
   max-width: 100%;
   height: 20rem;
@@ -229,6 +299,11 @@ header {
 @media screen and (min-width: 850px) {
   .brand__link {
     width: 30%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .brand__link {
+    justify-content: center;
   }
 }
 .brand__logo {
@@ -272,12 +347,22 @@ header {
   .nav {
     right: 15px;
     display: flex;
-    width: 75%;
+    width: 640px;
     box-shadow: none;
     border-radius: none;
     height: 17rem;
     align-items: center;
     overflow: none;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1299px) {
+  .nav {
+    width: 800px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .nav {
+    width: 1000px;
   }
 }
 .nav > ul {
@@ -322,12 +407,6 @@ header {
   align-items: center;
 }
 
-@media screen and (min-width: 850px) {
-  .nav__list:nth-child(6) {
-    display: flex;
-    flex-direction: column;
-  }
-}
 .slide {
   display: flex;
 }
