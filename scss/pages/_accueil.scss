@@ -1,0 +1,107 @@
+.accueil {
+  width: 100%;
+  height: auto;
+
+  &__hero {
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__title {
+    width: 300px;
+    font-size: clamp(3.5rem, 5vw, 6rem);
+    margin: 15px 15px 30px 30px;
+    padding: 10px;
+
+    @include tv {
+      width: 450px
+    }
+  }
+
+  &__title-paragraph {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 35px 25px 10px 45px;
+  }
+
+  &__spanImg {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 90%;
+    height: 40vh;
+    z-index: 1;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background: #b4ecec47;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    box-shadow: 5px -7px 20px 5px azure;
+
+
+    @include phone {
+      width: 90%;
+      height: 30vh;
+    }
+
+    @include mid-phone {
+      width: 80%;
+      height: 35vh;
+    }
+
+
+    @include tablette {
+      width: 65%;
+      height: 50vh;
+    }
+
+    @include surface-pro {
+      height: 34vh;
+    }
+
+    @include surface__pro-height {
+      height: 34vh;
+    }
+
+    @include desktop {
+      width: 60%;
+    }
+
+    @include big-desktop {
+      width: 45%;
+    }
+  }
+
+  &__title-span {
+    width: 45%;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
+  }
+
+  &__container-img {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    height: 90%;
+    object-fit: cover;
+    object-position: 16%;
+    transform: rotateY(190deg);
+
+    object-position: 10%;
+
+    @include desktop {
+      object-position: 3rem;
+    }
+  }
+}

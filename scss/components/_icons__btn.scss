@@ -38,7 +38,7 @@
       box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .accueil,
+    .accueil__menu,
     .profil,
     .parcours,
     .portfolio,
@@ -51,11 +51,11 @@
 
     .icon__container {
       @include neumorphic__btn__active;
-      background: #ff66c4;
+      background: $pink_color;
       transition: all 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
 
       >i {
-        color: #fff;
+        color: $primary-color;
         transform: scale(1.1);
         border-radius: 100%;
         border: 5px solid $primary-color;

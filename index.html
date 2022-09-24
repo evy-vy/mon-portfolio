@@ -27,8 +27,9 @@
       <nav class="nav">
         <ul class="nav__ul">
           <li class="nav__list">
-            <a class ="nav__list-menu" href="#">
-              <div class="tooltip accueil">Accueil
+            <a class ="nav__list-menu" href="#accueil">
+              <div class="tooltip accueil__menu">
+                <span class="tooltip-text">Accueil</span> 
                 <div class="fleche"></div>
               </div>
               <span class="icon__container">
@@ -39,7 +40,8 @@
           </li>
           <li class="nav__list">
             <a class ="nav__list-menu" href="#">
-              <div class="tooltip profil">Profil
+              <div class="tooltip profil">
+                <span class="tooltip-text">Profil</span> 
                 <div class="fleche"></div>
               </div>
               <span class="icon__container">
@@ -50,7 +52,8 @@
           </li>
           <li class="nav__list">
             <a class ="nav__list-menu" href="#">
-              <div class="tooltip parcours">Parcours
+              <div class="tooltip parcours">
+                <span class="tooltip-text">Parcours</span> 
                 <div class="fleche"></div>
               </div>
               <span class="icon__container">
@@ -61,7 +64,8 @@
           </li>
           <li class="nav__list">
             <a class ="nav__list-menu" href="#">
-              <div class="tooltip portfolio">Portfolio
+              <div class="tooltip portfolio">
+                <span class="tooltip-text">Portfolio</span> 
                 <div class="fleche"></div>
               </div>
               <span class="icon__container">
@@ -72,7 +76,8 @@
           </li>
           <li class="nav__list">
             <a class ="nav__list-menu" href="#">
-              <div class="tooltip contact">Contact
+              <div class="tooltip contact">
+                <span class="tooltip-text">Contact</span> 
                 <div class="fleche"></div>
               </div>
               <span class="icon__container">
@@ -83,7 +88,8 @@
           </li>
             <li class="nav__list">
               <a class ="nav__list-menu github" href="#">
-                <div class="tooltip github">Github
+                <div class="tooltip github">
+                   <span class="tooltip-text">Github</span> 
                   <div class="fleche"></div>
                 </div>
                 <span class="icon__container">
@@ -91,7 +97,8 @@
                 </span>
               </a>
               <a class ="nav__list-menu linkedin" href="#">
-                <div class="tooltip linkedin">Linkedin
+                <div class="tooltip linkedin">
+                  <span class="tooltip-text">Linkedin</span> 
                   <div class="fleche"></div>
                 </div>
                 <span class="icon__container">
@@ -104,11 +111,46 @@
     </header>
     <!-- fin header -->
     <!-- main -->
-    <!-- hero -->
-    <!-- fin hero -->
+    <main>
+    <!-- accueil -->
+      <section id="accueil" class="accueil">
+        <div class="accueil__hero">
+          <p class="accueil__title-paragraph">Salut! je suis Evetricia Kalala
+          </p>
+          <h1 class="accueil__title">
+            Développeuse web junior
+          </h1>
+            <a class="container__contact-btn" href="mailto: kalala.evetricia@gmail.com">
+              <span class="contact__btn">
+                Contactez-moi 
+              </span>
+              <span class="mail__icon">
+                <i class="fa-solid fa-envelope"></i>
+              </span> 
+            </a>
+          <div class="accueil__spanImg">
+            <p class="accueil__title-span"></p>
+            <div class="accueil__container-img">
+              <img src="./images/hero__img.webp" class="accueil__image" alt="illustration 3d d'un ordinateur de bureau">
+            </div>
+          </div>
+        </div>
+        <div class="first__circle"></div>
+        <div class="second__circle"></div>
+        <div class="third__circle-box">
+          <div class="third__circle"></div>
+        </div>
+        <div class="fourth__circle"></div>
+      </section>
+      <!-- fin accueil -->
+      <!-- profil -->
+      <!-- fin profil -->
+    </main>
+
     <!-- fin main -->
     <!-- footer -->
     <!-- fin footer -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

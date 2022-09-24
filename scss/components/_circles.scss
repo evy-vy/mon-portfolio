@@ -1,0 +1,24 @@
+.first__circle {
+  @include first__circle;
+}
+
+
+.second__circle {
+  @include second__circle;
+}
+
+.third__circle {
+  @include third__circle;
+}
+
+@include desktop {
+  .fourth__circle {
+    @include fourth__circle;
+  }
+}
+
+@include big-desktop {
+  .fourth__circle {
+    @include fourth__circle;
+  }
+}

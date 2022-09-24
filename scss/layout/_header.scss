@@ -4,7 +4,7 @@ header {
   height: 20rem;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #fff;
+  border-bottom: 5px solid #fff;
 }
 
 // logo
@@ -54,9 +54,10 @@ header {
   bottom: 20px;
   width: 210px;
   border-radius: 50px 0px 0px 50px;
-  background: #ebecf0;
-  box-shadow: -20px 20px 60px #c8c9cc,
-    20px -20px 60px #ffffff;
+  background: #f9f9f9;
+  box-shadow: -20px 20px 60px #e3e3e3,
+    20px -20px 60px #fff;
+  z-index: 1000;
   // overflow: hidden;
   // transform: translateX(100%);
   // transition: all 1s ease-in-out;
@@ -86,7 +87,7 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 5.5rem;
+    margin-top: 7.5rem;
 
     @include tablette {
       justify-content: center;
@@ -128,6 +129,7 @@ header {
 // class ajouter par toggle js pour ouverture/fermeture nav
 .slide {
   display: flex;
+  position: fixed;
   // transform: translateX(0);
   // transition: all 1s ease-in-out;
 }

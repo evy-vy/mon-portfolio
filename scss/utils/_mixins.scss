@@ -10,7 +10,7 @@
   height: 100%;
   background: #EEF0F4;
   border-radius: 20rem;
-  box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
+  box-shadow: inset 9.91px 9.91px 15px #d9dade, inset -9.91px -9.91px 15px #fff;
 }
 
 // neumorphism
@@ -23,16 +23,16 @@
   flex-direction: column;
   cursor: pointer;
   border-radius: 10px;
-  background: linear-gradient(145deg, #fff, #c1c3c6);
+  background: linear-gradient(145deg, #fff, #cacaca);
   border-radius: 100%;
-  box-shadow: 9.91px 9.91px 15px #d9dade, -9.91px -9.91px 15px #fff;
+  box-shadow: 9.91px 9.91px 15px #e3e3e3, -9.91px -9.91px 15px #fff;
   transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
 }
 
 // lignes bouton navigation 
 @mixin lines {
   background-color: $blue_color;
-  box-shadow: 0px 0px 10px 0px rgba(132, 220, 255, 0.98);
+  box-shadow: 0px 0px 10px 0px rgba(165, 201, 255, 0.67);
   width: 35px;
   height: 4px;
   border-radius: 4px;
@@ -43,7 +43,7 @@
 
 // neumorphism activ
 @mixin neumorphic__btn__active {
-  box-shadow: inset 9.91px 9.91px 15px #d9dade, inset -9.91px -9.91px 15px #fff;
+  box-shadow: inset 9.91px 9.91px 15px #e3e3e3, inset -9.91px -9.91px 15px #fff;
 }
 
 //tooltip
@@ -54,11 +54,13 @@
   top: 15px;
   font-size: 1.6rem;
   padding: 10px 18px;
-  background: #fff;
-  box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+  background: #000;
   border-radius: 25px;
-  box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px -1px 15px #0b0c0c;
 
+  &-text {
+    color: #e3e3e3;
+  }
 }
 
 @mixin fleche {
@@ -66,13 +68,107 @@
   content: "";
   height: 15px;
   width: 15px;
-  background: #fff;
+  background: #000;
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
 }
 
+@mixin first__circle {
+  position: relative;
+  left: 65%;
+  bottom: -150px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: rgb(235, 236, 240);
+  box-shadow: inset 9.91px 9.91px 15px #d6d7da, inset -9.91px -9.91px 15px #fff;
+}
+
+@mixin second__circle {
+  position: relative;
+  left: 80%;
+  bottom: -75px;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 0 100% 100%;
+  background: linear-gradient(to bottom, $primary-color 0%, #f3dad6 50%, #edc3b6 100%);
+  box-shadow: inset 9.91px 9.91px 15px #d6d7da, inset -9.91px -9.91px 15px #fff;
+  transform: rotate(260deg);
+}
+
+@mixin third__circle {
+  position: relative;
+  left: 85%;
+  bottom: -110px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: linear-gradient(to bottom, #f9f9f9 0%, #eff3d6 50%, #b6edc5 100%);
+  box-shadow: inset 9.91px 9.91px 15px #d6d7da, inset -9.91px -9.91px 15px #fff;
+  animation: courbe 10s linear infinite alternate;
+}
+
+@mixin fourth__circle {
+  position: relative;
+  left: 71%;
+  bottom: -155px;
+  width: 60px;
+  height: 70px;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  background: linear-gradient(to bottom, #f9f9f9 0%, #c7b6ed 100%);
+  animation: morph 3s linear infinite;
+}
+
+@mixin contact__container {
+  width: 175px;
+  background: #7fffd4;
+  position: relative;
+  top: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 5px 10px 0px;
+  padding: 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+@mixin contact__btn {
+  width: 125px;
+  height: 20px;
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+@mixin mail__icon {
+  font-size: 1.9rem;
+  margin-left: 4px;
+  color: #fabc05;
+}
+
+
+
 // media queries
+
+@mixin phone {
+  @media screen and (min-width: map-get($phone-breakpoints, min-phone)) and (max-width: map-get($phone-breakpoints, phone)) {
+    @content;
+  }
+}
+
+@mixin mid-phone {
+  @media screen and (min-width: map-get($phone-breakpoints, phone-mid)) and (max-width: map-get($phone-breakpoints, phone-max)) {
+    @content;
+  }
+}
+
+@mixin phone-max {
+  @media screen and (max-width: map-get($tablette-breakpoints, phone-max)) {
+    @content;
+  }
+}
+
 @mixin tablette {
   @media screen and (min-width: map-get($tablette-breakpoints, tablette-min)) {
     @content;
@@ -102,6 +198,19 @@
     @content;
   }
 }
+
+@mixin surface-pro {
+  @media screen and (min-width: map-get($surface__pro-breakpoints, surface__pro-min)) and (max-width: map-get($surface__pro-breakpoints, surface__pro-min)) and (min-height: map-get($surface__pro-breakpoints, surface__pro-heigh)) and (max-height: map-get($surface__pro-breakpoints, surface__pro-max-heigh)) {
+    @content;
+  }
+}
+
+@mixin surface__pro-height {
+  @media screen and (min-height: map-get($surface__pro-breakpoints, surface__pro-min-heigh)) and (max-height: map-get($surface__pro-breakpoints, surface__pro-max-heigh)) {
+    @content;
+  }
+}
+
 
 @mixin tv {
   @media screen and (min-width: map-get($tv-breakpoints, tv-min)) {

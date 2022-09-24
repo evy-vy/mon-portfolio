@@ -1,5 +1,7 @@
 // breakpoints
 
+$phone-breakpoints : (min-phone:360px, phone:549px, phone-mid:550px, phone-max: 849px);
 $tablette-breakpoints : (tablette-min: 850px, max-tablette: 1024px);
+$surface__pro-breakpoints : (surface__pro-min:912px, surface__pro-max:915px, surface__pro-min-heigh:1368px, surface__pro-max-heigh:1370px);
 $desktop-breakpoints : (desktop-min: 1025px, mid-desktop: 1299px, big-desktop-min: 1300px);
 $tv-breakpoints : (tv-min: 1499px);

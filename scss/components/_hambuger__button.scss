@@ -1,7 +1,7 @@
 // gestion du bouton menu
 .header__button {
   @include neumorphic__btn;
-  z-index: 10;
+  z-index: 1100;
 
   @include tablette {
     display: none;
@@ -20,6 +20,7 @@
 // gestion du bouton de navigation + ligne au toggle
 .active {
   @include neumorphic__btn__active;
+  position: fixed;
 
   .line {
     margin: -2px;

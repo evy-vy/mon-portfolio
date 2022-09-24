@@ -2,8 +2,12 @@
 @import "./utils/mixins";
 @import "./utils/breakpoints";
 @import "./base/base";
+@import "./base/_keyframes";
 @import "./components/hambuger__button";
 @import "./components/icons__btn";
 @import "./components/tooltip";
+@import "./components/circles";
+@import "./components/contact__btn";
 @import "./layout/header";
+@import "./pages/accueil";
 @import "./pages/profil";
