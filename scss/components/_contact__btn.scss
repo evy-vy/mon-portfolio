@@ -1,5 +1,5 @@
-.container__contact-btn {
-  @include contact__container;
+.container__action-btn {
+  @include action__container;
 
   @include desktop {
     width: 245px;
@@ -9,28 +9,21 @@
     width: 245px;
   }
 
-  // &:visited {
-  //   .contact__btn {
-  //     color: blue;
-  //   }
-  // }
-
   &:hover {
-    .mail__icon {
+    .action__icon {
       animation: hi 1s ease;
     }
-  }
 
-}
-
-.contact__btn {
-  @include contact__btn;
-
-  &:hover {
-    text-decoration: underline;
+    .action__btn {
+      text-decoration: underline;
+    }
   }
 }
 
-.mail__icon {
-  @include mail__icon;
+.action__btn {
+  @include action__btn;
+}
+
+.action__icon {
+  @include action__icon;
 }

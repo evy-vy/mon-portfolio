@@ -110,7 +110,7 @@ th {
     transform: translateY(3vh);
   }
   to {
-    transform: translateY(45vh);
+    transform: translateY(43vh);
   }
 }
 @keyframes hi {
@@ -383,8 +383,8 @@ th {
     animation: morph 3s linear infinite;
   }
 }
-.container__contact-btn {
-  width: 175px;
+.container__action-btn {
+  width: 180px;
   background: #7fffd4;
   position: relative;
   top: -40px;
@@ -397,29 +397,29 @@ th {
   cursor: pointer;
 }
 @media screen and (min-width: 1025px) and (max-width: 1299px) {
-  .container__contact-btn {
+  .container__action-btn {
     width: 245px;
   }
 }
 @media screen and (min-width: 1300px) {
-  .container__contact-btn {
+  .container__action-btn {
     width: 245px;
   }
 }
-.container__contact-btn:hover .mail__icon {
+.container__action-btn:hover .action__icon {
   animation: hi 1s ease;
 }
-
-.contact__btn {
-  width: 125px;
-  height: 20px;
-  font-size: clamp(1.6rem, 5vw, 1.8rem);
-}
-.contact__btn:hover {
+.container__action-btn:hover .action__btn {
   text-decoration: underline;
 }
 
-.mail__icon {
+.action__btn {
+  width: 110px;
+  height: 20px;
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+.action__icon {
   font-size: 1.9rem;
   margin-left: 4px;
   color: #fabc05;
