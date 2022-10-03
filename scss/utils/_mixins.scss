@@ -74,10 +74,23 @@
   transform: translateX(-50%) rotate(45deg);
 }
 
+//important titles
+@mixin titles {
+  width: 300px;
+  font-size: clamp(3.5rem, 5vw, 6rem);
+  margin: 15px 15px 30px 30px;
+  padding: 10px;
+
+  @include tv {
+    width: 450px
+  }
+}
+
+//circles
 @mixin first__circle {
-  position: relative;
-  left: 65%;
-  bottom: -150px;
+  position: absolute;
+  left: 67%;
+  bottom: 64%;
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -86,9 +99,9 @@
 }
 
 @mixin second__circle {
-  position: relative;
-  left: 80%;
-  bottom: -75px;
+  position: absolute;
+  left: 82%;
+  bottom: 68%;
   width: 60px;
   height: 60px;
   padding: 10px;
@@ -99,21 +112,21 @@
 }
 
 @mixin third__circle {
-  position: relative;
+  position: absolute;
   left: 85%;
-  bottom: -110px;
+  bottom: 55%;
   width: 50px;
   height: 50px;
   border-radius: 100%;
   background: linear-gradient(to bottom, #f9f9f9 0%, #eff3d6 50%, #b6edc5 100%);
   box-shadow: inset 9.91px 9.91px 15px #d6d7da, inset -9.91px -9.91px 15px #fff;
-  animation: courbe 10s linear infinite alternate;
+  animation: upDown 10s linear infinite alternate;
 }
 
 @mixin fourth__circle {
-  position: relative;
+  position: absolute;
   left: 71%;
-  bottom: -155px;
+  bottom: 50%;
   width: 60px;
   height: 70px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
@@ -121,6 +134,8 @@
   animation: morph 3s linear infinite;
 }
 
+
+//call to action button
 @mixin action__container {
   width: 180px;
   background: #7fffd4;
@@ -129,7 +144,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 5px 10px 0px;
+  margin: 15px 5px 10px 0px;
   padding: 15px;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -147,10 +162,32 @@
   color: #fabc05;
 }
 
+@mixin action__icon2 {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e9820c;
+}
+
+
+//profil bubbles
+@mixin bubbles {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #fffb23;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #fffb2344, 0 0 50px #fffb23, 0 0 100px #fffb23;
+  animation: bubbles 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
+}
 
 
 // media queries
-
 @mixin phone {
   @media screen and (min-width: map-get($phone-breakpoints, min-phone)) and (max-width: map-get($phone-breakpoints, phone)) {
     @content;

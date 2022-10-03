@@ -4,21 +4,16 @@
 
   &__hero {
     overflow: hidden;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   &__title {
-    width: 300px;
-    font-size: clamp(3.5rem, 5vw, 6rem);
-    margin: 15px 15px 30px 30px;
-    padding: 10px;
-
-    @include tv {
-      width: 450px
-    }
+    @include titles;
   }
 
   &__title-paragraph {
@@ -34,6 +29,7 @@
     height: 40vh;
     z-index: 1;
     margin: 0 auto;
+    margin-top: 20px;
     margin-bottom: 5px;
     background: #b4ecec47;
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;

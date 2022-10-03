@@ -39,8 +39,8 @@
             </a>
           </li>
           <li class="nav__list">
-            <a class ="nav__list-menu" href="#">
-              <div class="tooltip profil">
+            <a class ="nav__list-menu" href="#profil">
+              <div class="tooltip profil__menu">
                 <span class="tooltip-text">Profil</span> 
                 <div class="fleche"></div>
               </div>
@@ -52,7 +52,7 @@
           </li>
           <li class="nav__list">
             <a class ="nav__list-menu" href="#">
-              <div class="tooltip parcours">
+              <div class="tooltip parcours__menu">
                 <span class="tooltip-text">Parcours</span> 
                 <div class="fleche"></div>
               </div>
@@ -64,7 +64,7 @@
           </li>
           <li class="nav__list">
             <a class ="nav__list-menu" href="#">
-              <div class="tooltip portfolio">
+              <div class="tooltip portfolio__menu">
                 <span class="tooltip-text">Portfolio</span> 
                 <div class="fleche"></div>
               </div>
@@ -76,7 +76,7 @@
           </li>
           <li class="nav__list">
             <a class ="nav__list-menu" href="#">
-              <div class="tooltip contact">
+              <div class="tooltip contact__menu">
                 <span class="tooltip-text">Contact</span> 
                 <div class="fleche"></div>
               </div>
@@ -88,7 +88,7 @@
           </li>
             <li class="nav__list">
               <a class ="nav__list-menu github" href="#">
-                <div class="tooltip github">
+                <div class="tooltip github__menu">
                    <span class="tooltip-text">Github</span> 
                   <div class="fleche"></div>
                 </div>
@@ -96,8 +96,8 @@
                   <i class="fa-brands fa-github"></i>
                 </span>
               </a>
-              <a class ="nav__list-menu linkedin" href="#">
-                <div class="tooltip linkedin">
+              <a class ="nav__list-menu" href="#">
+                <div class="tooltip linkedin__menu">
                   <span class="tooltip-text">Linkedin</span> 
                   <div class="fleche"></div>
                 </div>
@@ -120,30 +120,66 @@
           <h1 class="accueil__title">
             Développeuse web junior
           </h1>
-            <a class="container__action-btn" href="#">
-              <span class="action__btn">
-                Mon portfolio
-              </span>
-              <span class="action__icon">
-                <i class="fa-solid fa-book-open-reader"></i>
-              </span> 
-            </a>
+          <a class="container__action-btn" href="#">
+            <span class="action__btn">
+              Mon portfolio
+            </span>
+            <span class="action__icon">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </span> 
+          </a>
           <div class="accueil__spanImg">
             <p class="accueil__title-span"></p>
             <div class="accueil__container-img">
               <img src="./images/hero__img.webp" class="accueil__image" alt="illustration 3d d'un ordinateur de bureau">
             </div>
           </div>
-        </div>
-        <div class="first__circle"></div>
-        <div class="second__circle"></div>
-        <div class="third__circle-box">
+          <div class="first__circle"></div>
+          <div class="second__circle"></div>
           <div class="third__circle"></div>
+          <div class="fourth__circle"></div>
         </div>
-        <div class="fourth__circle"></div>
       </section>
       <!-- fin accueil -->
       <!-- profil -->
+      <section id="profil">
+        <div class="profil__container">
+          <div class="profil__container-pic">
+            <div class="bubbles__container">
+              <span class="bubbles" style="--i:11;"></span>
+              <span class="bubbles" style="--i:12;"></span>
+              <span class="bubbles" style="--i:24;"></span>
+              <span class="bubbles" style="--i:10;"></span>
+              <span class="bubbles" style="--i:14;"></span>
+              <span class="bubbles" style="--i:23;"></span>
+              <span class="bubbles" style="--i:18;"></span>
+              <span class="bubbles" style="--i:16;"></span>
+              <span class="bubbles" style="--i:19;"></span>
+              <span class="bubbles" style="--i:20;"></span>
+              <span class="bubbles" style="--i:22;"></span>
+            </div>
+            <img src="./images/photo_profil.webp" class="my__pic" alt="photo profil d'evetricia kalala">
+          </div>
+          <div class="profil__container-texteAndAction">
+            <h2 class="profil__title">
+              Qui suis-je ?
+            </h2>
+            <p class="profil__presentation">
+              Une femme dynamique, souriante et bonne communicante, qui a osé la grande aventure de la reconversion pour exercer le métier capable de satisfaire sa curiosité, sa soif d'apprendre et libérer sa créativité : Celui de web developper.<br><br>
+              Ce que j'aime, c'est coder des sites "from "scratch",<br>Les faire naitre et grandir.<br><br>
+              Rigoureuse et attachée à la qualité de mes développements, je mettrais un point d'honneur à vous donner entière satisfaction en développant la solution web répondant à vos besoins. 
+              N'hésitez pas à me confier vos plus beaux projets.<br><br>
+              <span class="italic">Au plaisir de travailler "avec vous".</span><br><br> 
+              <span class="name">Evetricia KALALA</span> 
+            </p>
+            <a class="container__action-btn2" href="#contact">
+            <span class="action__icon2">
+              <i class="fa-solid fa-envelope"></i>
+            </span> 
+          </a>
+          </div>
+        </div>
+      </section>
       <!-- fin profil -->
     </main>
 

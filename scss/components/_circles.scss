@@ -20,5 +20,6 @@
 @include big-desktop {
   .fourth__circle {
     @include fourth__circle;
+    bottom: 47%;
   }
 }

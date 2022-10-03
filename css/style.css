@@ -105,7 +105,7 @@ th {
     border-radius: 100% 60% 60% 100%/100% 100% 60% 60%;
   }
 }
-@keyframes courbe {
+@keyframes upDown {
   from {
     transform: translateY(3vh);
   }
@@ -128,6 +128,14 @@ th {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes bubbles {
+  0% {
+    transform: translateY(50vh) scale(0);
+  }
+  100% {
+    transform: translateY(-5vh) scale(0.5);
   }
 }
 .header__button {
@@ -233,12 +241,12 @@ th {
   box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.2);
 }
 .nav__list-menu:hover .accueil__menu,
-.nav__list-menu:hover .profil,
-.nav__list-menu:hover .parcours,
-.nav__list-menu:hover .portfolio,
-.nav__list-menu:hover .contact,
-.nav__list-menu:hover .github,
-.nav__list-menu:hover .linkedin {
+.nav__list-menu:hover .profil__menu,
+.nav__list-menu:hover .parcours__menu,
+.nav__list-menu:hover .portfolio__menu,
+.nav__list-menu:hover .contact__menu,
+.nav__list-menu:hover .github__menu,
+.nav__list-menu:hover .linkedin__menu {
   font-weight: bold;
   color: #000;
 }
@@ -324,9 +332,9 @@ th {
 }
 
 .first__circle {
-  position: relative;
-  left: 65%;
-  bottom: -150px;
+  position: absolute;
+  left: 67%;
+  bottom: 64%;
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -335,9 +343,9 @@ th {
 }
 
 .second__circle {
-  position: relative;
-  left: 80%;
-  bottom: -75px;
+  position: absolute;
+  left: 82%;
+  bottom: 68%;
   width: 60px;
   height: 60px;
   padding: 10px;
@@ -348,22 +356,22 @@ th {
 }
 
 .third__circle {
-  position: relative;
+  position: absolute;
   left: 85%;
-  bottom: -110px;
+  bottom: 55%;
   width: 50px;
   height: 50px;
   border-radius: 100%;
   background: linear-gradient(to bottom, #f9f9f9 0%, #eff3d6 50%, #b6edc5 100%);
   box-shadow: inset 9.91px 9.91px 15px #d6d7da, inset -9.91px -9.91px 15px #fff;
-  animation: courbe 10s linear infinite alternate;
+  animation: upDown 10s linear infinite alternate;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1299px) {
   .fourth__circle {
-    position: relative;
+    position: absolute;
     left: 71%;
-    bottom: -155px;
+    bottom: 50%;
     width: 60px;
     height: 70px;
     border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
@@ -373,14 +381,15 @@ th {
 }
 @media screen and (min-width: 1300px) {
   .fourth__circle {
-    position: relative;
+    position: absolute;
     left: 71%;
-    bottom: -155px;
+    bottom: 50%;
     width: 60px;
     height: 70px;
     border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
     background: linear-gradient(to bottom, #f9f9f9 0%, #c7b6ed 100%);
     animation: morph 3s linear infinite;
+    bottom: 47%;
   }
 }
 .container__action-btn {
@@ -391,7 +400,7 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 5px 10px 0px;
+  margin: 15px 5px 10px 0px;
   padding: 15px;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -425,8 +434,32 @@ th {
   color: #fabc05;
 }
 
+.bubbles__container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.bubbles {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #fffb23;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(255, 251, 35, 0.2666666667), 0 0 50px #fffb23, 0 0 100px #fffb23;
+  animation: bubbles 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
+}
+
+.bubbles:nth-child(even) {
+  background: #ffb2b2;
+  box-shadow: 0 0 0 10px rgba(255, 178, 178, 0.2666666667), 0 0 50px #ffb2b2, 0 0 100px #ffb2b2;
+}
+
 header {
-  max-width: 100%;
+  width: 99%;
   height: 20rem;
   display: flex;
   justify-content: space-between;
@@ -479,7 +512,6 @@ header {
 
 .nav {
   display: none;
-  position: absolute;
   top: 20px;
   right: 0;
   bottom: 20px;
@@ -557,6 +589,21 @@ header {
   display: flex;
   position: fixed;
 }
+@media screen and (min-width: 1025px) and (max-width: 1299px) {
+  .slide {
+    position: inherit;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .slide {
+    position: inherit;
+  }
+}
+@media screen and (min-width: 1499px) {
+  .slide {
+    position: inherit;
+  }
+}
 
 .accueil {
   width: 100%;
@@ -564,10 +611,12 @@ header {
 }
 .accueil__hero {
   overflow: hidden;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 40px;
+  margin-bottom: 60px;
 }
 .accueil__title {
   width: 300px;
@@ -592,6 +641,7 @@ header {
   height: 40vh;
   z-index: 1;
   margin: 0 auto;
+  margin-top: 20px;
   margin-bottom: 5px;
   background: rgba(180, 236, 236, 0.2784313725);
   border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
@@ -665,48 +715,165 @@ header {
   }
 }
 
-.profil__container {
+#profil {
+  display: flex;
+  margin: 10px 0;
+  padding: 20px 0;
   width: 100%;
-  height: auto;
-  margin: 20px 0;
+  position: relative;
+  background-image: linear-gradient(to bottom, #f9f9f9, #f4f4f4, #f0f0f0, #ebebeb, #e7e7e7);
+}
+
+.profil__container {
+  display: flex;
+  position: relative;
+  width: 75vw;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin: 30px;
+  border-radius: 10px;
+  background-image: linear-gradient(to left bottom, #ae1797, #dc107b, #f63b5b, #fe683c, #f7941d);
+  z-index: 500;
+}
+@media screen and (min-width: 850px) {
+  .profil__container {
+    width: 530px;
+  }
+}
+.profil__container-texteAndAction {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  padding-bottom: 35px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.2);
+}
+.profil__container-pic {
+  width: 230px;
+  height: 245px;
+  padding: 10px;
+  margin: 30px 0;
   position: absolute;
+  right: -23px;
+  top: -80px;
+  border: 8px solid #649ed7;
+  border-radius: 100%;
+  background: #649ed7;
+  box-shadow: inset 9.91px 9.91px 15px #1F60C5, inset -9.91px -9.91px 15px #649ed7;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  z-index: 100;
 }
 
-.profil__presentation {
-  width: 90%;
-  height: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  background: linear-gradient(145deg, #fff, #c2c3c6);
-  border-radius: 35px;
-  box-shadow: 9.91px 9.91px 15px #d6d7da, -9.91px -9.91px 15px #fff;
-}
-
-.profil__content {
-  width: 50%;
-}
-
-.profil__photo {
-  width: 50%;
-  border-radius: 0 0 0 35px;
-}
-
-.photo__profil {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0 0 0 35px;
-}
-
-.btn-contact {
+.profil__title {
+  width: 300px;
+  font-size: clamp(3.5rem, 5vw, 6rem);
+  margin: 15px 15px 30px 30px;
   padding: 10px;
-  border: 1px solid;
-  border-radius: 5px;
-  margin: 35px;
+  font-size: clamp(3.5rem, 5vw, 4rem);
+  color: #f9f9f9;
+  width: 78vw;
+  margin-top: 205px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid yellow;
+  z-index: 100;
+}
+@media screen and (min-width: 1499px) {
+  .profil__title {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 850px) {
+  .profil__title {
+    width: 107%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1299px) {
+  .profil__title {
+    width: 105%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .profil__title {
+    width: 105%;
+  }
+}
+.profil__presentation {
+  color: #f9f9f9;
+  font-size: clamp(1rem, 5vw, 1.6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+  line-height: 1.3;
+}
+
+.italic {
+  color: #3c454f;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.name {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  font-weight: lighter;
+  font-style: italic;
+  justify-content: flex-end;
+  font-size: clamp(1.4rem, 5vw, 1.6rem);
+}
+
+.my__pic {
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center -19px;
+  z-index: 100;
+}
+
+.container__action-btn2 {
+  display: inline;
+  flex-direction: column;
+  width: 110px;
+  height: 40px;
+  padding: 20px;
+  background: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  cursor: pointer;
+  border-radius: 10px 0;
+}
+.container__action-btn2:hover .action__icon2 {
+  animation: hi 1s ease;
+}
+
+.action__icon2 {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e9820c;
 }
 
 /*# sourceMappingURL=style.css.map */

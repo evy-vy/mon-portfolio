@@ -19,7 +19,7 @@ addClasslitActive(hamburgerBtn, nav);
 
 //typewritter
 new Typewriter(animTitleSpan, {
-  loop: true,
+  // loop: true,
   deleteSpeed: 20
 })
   .changeDelay(20)
@@ -38,7 +38,7 @@ new Typewriter(animTitleSpan, {
   .typeString(' <strong>JavaScript <span style="color: #f4c44e"><i class="fa-brands fa-square-js"></i></span</strong>')
   .pauseFor(1000)
   .deleteChars(12)
-  .typeString('<strong><span style="color: #3e4035">Node.</span><span style="color: #6ab849"><i class="fa-brands fa-node-js"></i></span></strong>')
+  .typeString('<strong><span style="color: #3e4035">Node</span><span style="color: #6ab849"><i class="fa-brands fa-node-js"></i></span></strong>')
   .pauseFor(1000)
   .deleteChars(9)
   .typeString('<strong style="color: #3e4035">Express </strong><span style= "color: #dd8a00"><i class="fa-solid fa-gears"></i></span>')
