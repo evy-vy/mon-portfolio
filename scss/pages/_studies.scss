@@ -1,0 +1,142 @@
+.studies {
+  width: 100%;
+  background: linear-gradient(180deg, #e7e7e7, #889db4, #2e537c);
+
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include titles;
+    width: 95%;
+    margin: -1px 15px 10px 30px;
+    padding: 10px 10px 50px 10px;
+  }
+
+  &__subtitle {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 20px 25px 10px 0;
+  }
+
+  &__paragraph {
+    @include paragraph;
+    width: 315px;
+    align-self: center;
+    margin-bottom: 40px;
+
+    @include mid-phone {
+      padding: 25px;
+      width: 475px;
+    }
+
+    @include tablette {
+      padding: 25px;
+      width: 500px;
+    }
+
+    @include desktop {
+      padding: 25px;
+      width: 500px;
+    }
+  }
+}
+
+.studies__img {
+  width: 95%;
+  position: relative;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+
+  @include mid-phone {
+    width: 75%;
+  }
+
+  @include tablette {
+    width: 65%;
+  }
+
+  @include tablette {
+    width: 65%;
+  }
+
+  @include desktop {
+    width: 55%;
+  }
+
+  @include big-desktop {
+    width: 40%;
+  }
+
+
+  &-clothing {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+
+  }
+
+  &-seller {
+    position: absolute;
+    top: 0px;
+    right: 1vh;
+    height: 100%;
+  }
+}
+
+.studies__laptop {
+  width: 98%;
+  display: block;
+  align-self: center;
+  margin: 45px 0;
+  padding: 20px;
+
+  @include mid-phone {
+    width: 478px;
+  }
+
+  @include tablette {
+    width: 559px;
+  }
+
+  &-womanLaptop {
+    float: left;
+    shape-outside: url(/images/woman-with-laptop-removebg.png);
+    height: 275px;
+
+    @include mid-phone {
+      height: 400px;
+    }
+
+    @include tablette {
+      height: 400px;
+    }
+
+    @include big-desktop {
+      height: 60vh;
+    }
+  }
+
+  &-paragraph {
+    @include paragraph;
+    width: 95%;
+    padding: 10px;
+    margin: 2px;
+
+    @include tablette {
+      width: 100%;
+    }
+  }
+}
+
+.container__action-btn {
+  margin-bottom: 80px;
+}
+
+.action__icon {
+  color: #dea703;
+}

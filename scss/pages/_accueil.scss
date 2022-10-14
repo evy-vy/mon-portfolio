@@ -14,6 +14,7 @@
 
   &__title {
     @include titles;
+    width: 100%;
   }
 
   &__title-paragraph {
@@ -25,48 +26,49 @@
     display: flex;
     flex-direction: row;
     text-align: center;
-    width: 90%;
-    height: 40vh;
+    width: 30rem;
+    height: 30rem;
     z-index: 1;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 5px;
     background: #b4ecec47;
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    // border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    border-radius: 100%;
     box-shadow: 5px -7px 20px 5px azure;
 
 
-    @include phone {
-      width: 90%;
-      height: 30vh;
-    }
+    // @include phone {
+    //   width: 90%;
+    //   height: 30vh;
+    // }
 
     @include mid-phone {
-      width: 80%;
-      height: 35vh;
+      width: 45rem;
+      height: 45rem;
     }
 
 
     @include tablette {
-      width: 65%;
-      height: 50vh;
+      width: 55rem;
+      height: 55rem;
     }
 
-    @include surface-pro {
-      height: 34vh;
-    }
+    // @include surface-pro {
+    //   height: 34vh;
+    // }
 
-    @include surface__pro-height {
-      height: 34vh;
-    }
+    // @include surface__pro-height {
+    //   height: 34vh;
+    // }
 
-    @include desktop {
-      width: 60%;
-    }
+    // @include desktop {
+    //   width: 60%;
+    // }
 
-    @include big-desktop {
-      width: 45%;
-    }
+    // @include big-desktop {
+    //   width: 45%;
+    // }
   }
 
   &__title-span {
@@ -80,7 +82,7 @@
   }
 
   &__container-img {
-    width: 55%;
+    // width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,15 +91,15 @@
   &__image {
     width: 100%;
     display: flex;
-    height: 90%;
+    // height: 90%;
     object-fit: cover;
-    object-position: 16%;
+    // object-position: 16%;
     transform: rotateY(190deg);
 
-    object-position: 10%;
+    // object-position: 10%;
 
-    @include desktop {
-      object-position: 3rem;
-    }
+    // @include desktop {
+    //   object-position: 3rem;
+    // }
   }
 }

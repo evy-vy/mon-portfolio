@@ -1,5 +1,9 @@
+//comportement call to action vert et orange
+
 .container__action-btn {
   @include action__container;
+  margin-top: 5px;
+
 
   @include desktop {
     width: 245px;
@@ -26,4 +30,19 @@
 
 .action__icon {
   @include action__icon;
+}
+
+.download__btn-container {
+  // background: red;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin-top: 15px;
+
+}
+
+.download {
+  padding: 18px;
+  border-radius: 100%;
+  /* margin: 10px 0; */
 }
